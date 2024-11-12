@@ -11,7 +11,7 @@ import sliderImg1 from '../assets/images/slider-img1.png'
 import aboutUs from '../assets/images/About-us.png'
 import visaConsultancy from "../assets/images/visa-consultancy.png";
 import nic from '../assets/images/NIC.png'
-import passportRenewal from '../assets/images/passport-renewal.webp'
+import passportRenewal from '../assets/images/passportRenewal.png'
 import attestationOrRegularisation from '../assets/images/attestaionOrregularisation.jpg'
 
 import { useLinkClickHandler, useNavigate } from "react-router-dom";
