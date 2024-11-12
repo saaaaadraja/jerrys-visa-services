@@ -119,12 +119,12 @@ return (
   <div className="row w-95 m-auto py-4" id="aboutUs">
     <p className="text-center heading-text">ABOUT US</p>
 <div className="col-8 about-text">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur mauris ex, at commodo libero
- venenatis ac. Cras at magna ut ex mattis facilisis. Ut fermentum fermentum sapien, eu convallis sapien
-  pretium sit amet. Curabitur pulvinar ullamcorper augue, eget tempus neque consequat ac. Etiam non urna
-   est. Aliquam ante odio, sagittis ut lacus non, venenatis faucibus risus. Cras aliquet porta leo quis 
-   blandit. Nullam lacinia maximus mi vel commodo.
- Donec laoreet, dolor a fermentum porta, orci massa faucibus ligula,
+We enthusiastically make your journey memorable that lasts for lifetime without any Visa hurdles. We look
+ forward in solving all the visa queries for travelers all over the world.  With our expertise, we serve with
+  the services of visa applications, nadra card, passport renewal and also attestation of documents. We give 
+  close attention to your travel plans and modify your wishes according to your requirements. We provide fast
+   services for visa applications to make your journey entertaining. Our aim is to prioritize ease for 
+   customer and fulfill their all requirements throughout the journey. 
 </div>
 <div className="col-4">
   <img src={aboutUs} alt="" className="w-100" />
@@ -138,47 +138,48 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ma
   <img src={visaConsultancy} alt="" className="w-95 m-auto  services-img" />
   <p className="service-name-text w-100 m-auto pt-4">VISA SERVICES</p>
   </div>
-  <p className="service-text w-85 m-auto pt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-     industry's standard dummytext ever .Lorem Ipsum is simply dummy text of the printing and typesetting 
-     industry. Lorem Ipsum has been the industry's standard dummytext ever </p>
+  <p className="service-text w-85 m-auto pt-3"> We provide visa consultants to give detail and proper 
+    information regarding each and every step required to fulfill visa application. We provide you with the 
+    list of documents that need to be provided and attested. Furthermore, it is our primary responsibility... </p>
 </div>
 <div className="col-3">
   <div className="select-service">
   <img src={nic} alt="" className="w-95 m-auto services-img" />
   <p className="service-name-text w-100 m-auto pt-4">NADRA CARD</p>
   </div>
-  <p className="service-text w-85 m-auto pt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-     industry's standard dummytext ever .Lorem Ipsum is simply dummy text of the printing and typesetting 
-     industry. Lorem Ipsum has been the industry's standard dummytext ever </p>
+  <p className="service-text w-85 m-auto pt-3">NICOP card is  required  for UK which is the identification of
+      Pakistanis living abroad that keeps them connected to their homeland Guidance about documents required 
+      to apply for NICOP. Helping them with their personal details need to be put on Nadra card and any...</p>
 </div>
 <div className="col-3">
 <div className="select-service">
   <img src={passportRenewal} alt="" className="w-95 m-auto  services-img" />
   <p className="service-name-text w-100 m-auto pt-4">PASPORT RENEWAL</p>
   </div>
-  <p className="service-text w-85 m-auto pt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-     industry's standard dummytext ever .Lorem Ipsum is simply dummy text of the printing and typesetting 
-     industry. Lorem Ipsum has been the industry's standard dummytext ever </p>
+  <p className="service-text w-85 m-auto pt-3"> We guide you with the online process of passport renewal for UK.
+     Through MRP (Machine Readable Passport ) application we guide you to upload certain documents for the 
+     renewal of passport . It is mandatory to renew your passport , if it is expiring within 6 months...</p>
 </div>
 <div className="col-3">
 <div className="select-service">
   <img src={attestationOrRegularisation} alt="" className="w-95 m-auto  services-img" />
   <p className="service-name-text w-100 m-auto pt-4"> ATTESTATION/REGULARISATION</p>
   </div>
-  <p className="service-text w-85 m-auto pt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-     industry's standard dummytext ever .Lorem Ipsum is simply dummy text of the printing and typesetting 
-     industry. Lorem Ipsum has been the industry's standard dummytext ever </p>
+  <p className="service-text w-85 m-auto pt-3">   We provide services of attestation and regularization for 
+    visa application to help customer smoothly find out the way. We make sure that all the documents are in 
+    order and meet the standards set by immigration authorities. If there are any missing documents, we make
+     sure to...</p>
 </div>
 </div>
   </div>
-  <div className="text-center" id="testimonials" style={{padding:'6vw 0'}}>
+  {/* <div className="text-center" id="testimonials" style={{padding:'6vw 0'}}>
   <p className="text-center heading-text">TESTIMONIALS</p>
 
     <Slider/>
-  </div>
+  </div> */}
+  <Carousel/>
   <div id="sendMessage">
 <SendMessage/>
-<Carousel/>
 </div>
 
     </>

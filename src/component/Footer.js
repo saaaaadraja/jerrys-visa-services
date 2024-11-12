@@ -18,13 +18,9 @@ const Footer = () => {
             <div className="about">
               <h1 className="footer-heading">About Us</h1>
               <p className="about-text w-60">
-              Lorem Ipsum is simply dummy text
- of the printing and typesetting 
-industry. Lorem Ipsum has been the
- industry's standard dummy text ever
- since the 1500s, when an unknown printer
- took a galley of type and scrambled it to
- make a type specimen book. 
+              We enthusiastically make your journey memorable that lasts for lifetime without any Visa hurdles.
+               We look forward in solving all the visa queries for travelers all over the world.  With our 
+               expertise, we serve with the services of visa applications, nadra card, passport renewal.... 
               </p>
             </div>
           </div>
