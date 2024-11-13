@@ -177,7 +177,9 @@ We enthusiastically make your journey memorable that lasts for lifetime without 
 
     <Slider/>
   </div> */}
+  <div id="testimonials" >
   <Carousel/>
+  </div>
   <div id="sendMessage">
 <SendMessage/>
 </div>
