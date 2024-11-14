@@ -4,7 +4,9 @@ import cart from '../assets/images/Icon ionic-md-cart.png'
 import arrow from '../assets/images/Icon ionic-ios-arrow-forward.png'
 import disabaleStar from '../assets/images/Icon feather-star-disabled.png'
 import userImg from '../assets/images/user-img.png'
-import axios from "axios";
+import client1 from '../assets/images/client1.png'
+import client2 from '../assets/images/client2.png'
+import client3 from '../assets/images/client3.png'
 
 const Slider=()=>{
   const [nth , setNtn] = React.useState();
@@ -14,31 +16,38 @@ const Slider=()=>{
   const [data , setData] = React.useState([
     {
         id: "22ad6437-de2a-438e-9a39-101739b04eea",
-        name: "Azaan Malik",
+        name: "MUHAMMAD FAIZAN",
         star: "5",
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-        Ipsum has been the industry's standard dummytext ever .Lorem Ipsum is simply dummy text of 
-        the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummytext ever`,
-        image: userImg,
+        description: `I couldn't be happier with the service I received from Jerry's Visa Services! From 
+        start to finish, their team made the visa application process so easy and stress-free. 
+        They answered all my questions, kept me updated, and guided me through every step. Thanks to them, 
+        I got my visa without any issues. Highly recommend them to anyone in need of visa assistance!`,
+        image: client2,
+        country:'Pakistan'
     }
     ,
     {
         id: "e243cd64-3d92-41df-bd38-3ba955887d90",
-        name: "Hassan Ali",
+        name: "DIANA-ANFREEA",
         star: "5",
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-        Ipsum has been the industry's standard dummytext ever .Lorem Ipsum is simply dummy text of 
-        the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummytext ever`,
-        image: userImg,
+        description: `Jerry's Visa Services provided excellent support throughout my visa application.
+         They were incredibly knowledgeable and professional, which gave me confidence in the entire 
+         process. I especially appreciated their quick response times and attention to detail, ensuring 
+         that my application was flawless. I’m grateful for their dedication and would definitely use their
+          services again in the future!`,
+        image: client1,
+        country: 'Romania'
     },
     {
         id: "b51a84c9-bdaa-43f3-b3f2-dae366a03ddf",
-        name: "Touqeer Mustafa",
+        name: "AMIR HAYAT",
         star: "5",
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-        Ipsum has been the industry's standard dummytext ever .Lorem Ipsum is simply dummy text of 
-        the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummytext ever`,
-        image: userImg,
+        description: `Outstanding experience! The team at Jerry's Visa Services went above and beyond 
+        to help me secure my visa on time. They took care of all the complex paperwork, and their expertise
+         made a huge difference. I can honestly say they saved me a lot of time and worry. If you're 
+         looking for a reliable visa service, Jerry’s is the way to go!`,
+        image: client3,    
+        country: 'UAE'   
     }
 ]);
   // const [storageData,setStorageData] = React.useState();
@@ -61,7 +70,6 @@ const Slider=()=>{
     //     )
     //    }
       // setData(res.data);
-      console.log(data.length);
       
       if (data.length == 0) {
         return;
@@ -214,6 +222,8 @@ return;
     {/* <p className="review-txt">{data[pre]?.reviews} reviews</p> */}
     <p className="price-txt" style={{fontSize:'0.5rem'}}>{data[pre]?.description}</p>
     
+    <p className="country-name-txt" >_{data[pre]?.country}</p>
+    
  {/* data[pre]?.disable == 'true'?(<button className="m-auto py-2 add-to-cart-btn btn-disabled w-50" disabled ><img  src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}}>Added</span></button>): */}
     {/* (<button className="m-auto py-2 add-to-cart-btn w-50" ><img src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}} >Add to cart</span></button>)} */}
     </div>
@@ -264,6 +274,8 @@ return;
     {/* <p className="review-txt">{data[curr]?.reviews} reviews</p> */}
     <p className="price-txt">{data[curr]?.description}</p>
     
+    <p className="country-name-txt" style={{fontSize:'1rem'}}>_{data[curr]?.country}</p>
+    
        {/* data[curr]?.disable == 'true'?(<button className="m-auto py-2 btn-disabled add-to-cart-btn w-50" disabled ><img  src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}}>Added</span></button>): */}
     {/* (<button className="m-auto py-2 add-to-cart-btn active" ><img  src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}}>Add to cart</span></button>)} */}
     </div>
@@ -313,6 +325,8 @@ return;
         </div>
     {/* <p className="review-txt">{data[nxt]?.reviews} reviews</p> */}
     <p className="price-txt" style={{fontSize:'0.5rem'}}> {data[nxt]?.description}</p>
+    
+    <p className="country-name-txt" >_{data[nxt]?.country}</p>
     
       {/* //  data[nxt]?.disable == 'true'?(<button className="m-auto py-2 btn-disabled add-to-cart-btn w-50" disabled ><img  src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}}>Added</span></button>): */}
     {/* // (<button className="m-auto py-2 add-to-cart-btn w-50" ><img  src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}}>Add to cart</span></button>)} */}
@@ -373,6 +387,8 @@ return;
         </div>
     {/* <p className="review-txt">{data[pre]?.reviews} reviews</p> */}
     <p className="price-txt" style={{fontSize:'0.5rem'}}> {data[pre]?.description}</p>
+    
+    <p className="country-name-txt" >_{data[pre]?.country}</p>
     <button className="m-auto py-2 add-to-cart-btn w-50"><img src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}} >Add to cart</span></button>
     </div>
   </div>
@@ -421,6 +437,8 @@ return;
         </div>
     {/* <p className="review-txt">{data[curr]?.reviews} reviews</p> */}
     <p className="price-txt">{data[curr]?.description}</p>
+    
+    <p className="country-name-txt" >_{data[curr]?.country}</p>
     <button className="m-auto py-2 add-to-cart-btn active" ><img  src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}}>Add to cart</span></button>
     </div>
   </div>
@@ -480,6 +498,8 @@ return;
         </div>
     {/* <p className="review-txt">{data[curr]?.reviews} reviews</p> */}
     <p className="price-txt">{data[curr]?.description}</p>
+    
+    <p className="country-name-txt" >_{data[curr]?.country}</p>
     <button className="m-auto py-2 add-to-cart-btn active" ><img  src={cart} alt=""/> <span style={{marginLeft:'0.5vw'}}>Add to cart</span></button>
     </div>
   </div>

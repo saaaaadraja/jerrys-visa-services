@@ -136,6 +136,13 @@ button,a{
     margin: auto;
     text-align: center;
     margin-top: 1rem;
+}
+.country-name-txt{
+    font-size: 0.7rem;
+    font-family: 'poppins';
+    width: 80%;
+    margin: auto;
+    text-align: center;
     padding-bottom: 2rem;
 }
 .add-to-cart-btn{
@@ -1116,6 +1123,8 @@ margin-top: -5rem !important;
     .user-img{
         position: relative;
         top: -3vw;
+        border: 4px solid #d9d9d9;
+        border-radius: 50%;
     }
     .mt-10{
         margin-top: 10rem ;

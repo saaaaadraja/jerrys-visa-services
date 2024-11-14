@@ -172,14 +172,14 @@ We enthusiastically make your journey memorable that lasts for lifetime without 
 </div>
 </div>
   </div>
-  {/* <div className="text-center" id="testimonials" style={{padding:'6vw 0'}}>
+  <div className="text-center" id="testimonials" style={{padding:'6vw 0'}}>
   <p className="text-center heading-text">TESTIMONIALS</p>
 
     <Slider/>
-  </div> */}
-  <div id="testimonials" >
-  <Carousel/>
   </div>
+  {/* <div id="testimonials" >
+  <Carousel/>
+  </div> */}
   <div id="sendMessage">
 <SendMessage/>
 </div>
