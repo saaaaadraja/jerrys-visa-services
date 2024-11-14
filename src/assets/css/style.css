@@ -1179,3 +1179,23 @@ margin-top: -5rem !important;
       .slick-center .slide-item {
         transform: scale(1.2); /* Increase the size of the center slide */
       }
+
+
+      .react-calendar__tile {
+        max-width: 100%;
+        padding: 10px 6.6667px;
+        background: none;
+        text-align: center;
+        line-height: 16px;
+        font: inherit;
+        font-size: 0.833em;
+        margin: 0 2px 2px 0 !important;
+        flex: 0 0 14.1% !important;
+    }
+    .react-calendar__tile--active {
+        background: #006edc !important;
+        color: white;
+    }
+    .react-calendar__tile--now {
+        background: #ffff76 ;
+    }

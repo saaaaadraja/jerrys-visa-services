@@ -52,7 +52,7 @@ const Routs = () =>{
                 <Footer/>
               </footer>
               <div className="socialLinksFloating">
-       <button className="w-100" onClick={()=>socialTab('https://api.whatsapp.com/send/?phone=%2B923475414329&text&type=phone_number&app_absent=0')}><img  className=" w-100 " src={whatsapp} alt=""/> </button> 
+       <button className="w-80" onClick={()=>socialTab('https://api.whatsapp.com/send/?phone=%2B923475414329&text&type=phone_number&app_absent=0')}><img  className=" w-100 " src={whatsapp} alt=""/> </button> 
     </div>
               </Router>
               </>)

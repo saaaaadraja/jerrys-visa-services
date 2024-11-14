@@ -8,6 +8,7 @@ import "../assets/css/footer.css";
 import { Col, Container, Row } from "react-bootstrap";
 const Footer = () => {
   return (<>
+        {window?.location?.pathname !== '/appointment' &&
     <Container className="footer pb-3" fluid>
       <Row>
         <Col>
@@ -52,6 +53,7 @@ const Footer = () => {
         <div className="col-md-4"><a><img  style={{  borderRadius: '0'}} className="w-100"  src={linkedin} /></a></div>
       </div>
     </Container>
+}
     <div className="w-100 rights py-2">
       <div className="row w-50 m-auto text-center">
         <div col>Copyright © 2024 All right reserved</div>

@@ -35,9 +35,13 @@ function activeNavItem(path) {
 const Header=()=>{
   const navigate = useNavigate();
   const clickHandler=(id)=>{
-   activeNavItem(`${id}`);
-    navigate(`${id}`);
-    window.location.reload();
+    if (id == '/appointment') { 
+       window.open(`${id}`,'_blank','noreferrer');
+    }else{
+      activeNavItem(`${id}`);
+      navigate(`${id}`);
+      window.location.reload();
+    }
     
   }
   
@@ -53,8 +57,8 @@ const Header=()=>{
     //   window.document.getElementById('cart-count-bg').style.display= 'none';
     // }
   },[])
-    return(
-        <div>
+    return(<>
+        {window?.location?.pathname !== '/appointment' && <div>
              <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid style={{width:'95%'}}>
         <Navbar.Brand onClick={(e)=>clickHandler('/')}><img style={{    width: '75%',marginLeft: '-2vw',marginTop:'1vw'}} src={logo} alt=''/> </Navbar.Brand>
@@ -73,14 +77,15 @@ const Header=()=>{
           </Nav>
           <Form className="d-flex gap-3 consult-button">
             <div className='position-relative w-100'>
-          <Button variant="outline-success consultation-btn w-100" onClick={(e)=>clickHandler('/appointment')}><span><img className='consult-icon' src={consultIcon} alt="" /></span>BOOK YOUR APPOINTMENT</Button>
+          <Button variant="outline-success consultation-btn w-100" onClick={(e)=>clickHandler('/appointment')} ><span><img className='consult-icon' src={consultIcon} alt="" /></span>BOOK YOUR APPOINTMENT</Button>
           </div>
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
         </div>
-    )
+        }
+    </>)
 }
 
 export default Header;

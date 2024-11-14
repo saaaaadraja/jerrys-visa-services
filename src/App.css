@@ -58,3 +58,27 @@
 .slick-list{
   padding-top: 3vw !important;
 }
+.next-btn{
+  filter: grayscale(1);
+  width: 8rem !important;
+  margin: 1vw auto 0 !important;
+  position: relative;
+  right: -70rem;
+}
+.next-btn.active{
+  filter: grayscale(0);
+}
+
+.next-btn-time-slot{
+  filter: grayscale(1);
+  width: 8rem !important;
+  margin: 1vw auto 0 !important;
+  position: relative;
+  right: -71.3rem;
+}
+.next-btn-time-slot.active{
+  filter: grayscale(0);
+}
+.react-calendar {
+  width: 1181px !important;
+}
