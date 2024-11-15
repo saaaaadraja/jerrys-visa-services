@@ -55,9 +55,7 @@
   background: #00000070 !important;
   border-radius: 50% !important;
 }
-.slick-list{
-  padding-top: 3vw !important;
-}
+
 .next-btn{
   filter: grayscale(1);
   width: 8rem !important;

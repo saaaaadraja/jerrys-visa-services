@@ -138,7 +138,7 @@ button,a{
     margin-top: 1rem;
 }
 .country-name-txt{
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-family: 'poppins';
     width: 80%;
     margin: auto;
@@ -1146,6 +1146,9 @@ margin-top: -5rem !important;
     #home{
         position: relative;
     }
+    .p-relative{
+        position: relative !important;
+    }
     .tag-line-text{
         position: absolute;
         top: 0;
@@ -1157,7 +1160,7 @@ margin-top: -5rem !important;
         height: 100%;
         font-size: 4rem;
         font-family: 'poppins-bold';
-        background: #00000059;
+        background: #000000a1;
         color: white ;
     }
     .tag-line-text p{
@@ -1207,4 +1210,44 @@ margin-top: -5rem !important;
     }
     .react-calendar__tile--now {
         background: #ffff76 ;
+    }
+    .slick-next{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    z-index: 1;
+    }
+    .slick-prev{
+        position: absolute;
+        top: 50%;
+        left: 1%;
+        z-index: 1;
+        }
+
+    .slick-dots{
+        position: absolute;
+        bottom: 5%;
+        z-index: 1;
+    }    
+
+    .slick-dots li button:before{
+        color: #b62234 !important;
+    }
+    .slick-dots li.slick-active button:before{
+        color: #b62234 !important;
+    }
+    .slick-list{
+        /* padding: 0 !important; */
+        position: relative;
+        top: -107px;
+    }
+    .home-btn{
+        position: absolute;
+        top: 65%;
+        z-index: 3;
+        width: 20% !important;
+        height: fit-content !important;
+        left: 40%;
+        padding: 15px 0;
+        background: #51bcff !important;
     }

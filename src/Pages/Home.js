@@ -8,6 +8,8 @@ import minerals from '../assets/images/Bottle_Minerals.png'
 import Slider from "../component/Slider";
 import ClientSlider from "../component/ClientSlider";
 import sliderImg1 from '../assets/images/slider-img1.png'
+import sliderImg2 from '../assets/images/home-bg1.png'
+import sliderImg3 from '../assets/images/home-bg2.png'
 import aboutUs from '../assets/images/About-us.png'
 import visaConsultancy from "../assets/images/visa-consultancy.png";
 import nic from '../assets/images/NIC.png'
@@ -18,6 +20,7 @@ import { useLinkClickHandler, useNavigate } from "react-router-dom";
 import axios from "axios";
 import SendMessage from "../component/SendMessage";
 import Carousel from '../component/Carousel'
+import SimpleCarousel from "../component/HomeSlider";
 
 const Home = () =>{
 
@@ -113,8 +116,7 @@ return (
     <>
     {/* <div className="image-top" style={{display:'none'}}><img className="w-100" src={banner1} alt="" /></div> */}
   <div className="w-100 " id="home">
-    <div className="tag-line-text">Unlocking Boundaries,<br/> Enabling <p>Journeys</p></div>
-<img src={sliderImg1} className="w-100" alt="" />
+    <SimpleCarousel/>
   </div>
   <div className="row w-95 m-auto py-4" id="aboutUs">
     <p className="text-center heading-text">ABOUT US</p>
@@ -175,11 +177,11 @@ We enthusiastically make your journey memorable that lasts for lifetime without 
   <div className="text-center" id="testimonials" style={{padding:'6vw 0'}}>
   <p className="text-center heading-text">TESTIMONIALS</p>
 
-    <Slider/>
+    {/* <Slider/> */}
   </div>
-  {/* <div id="testimonials" >
+  <div id="testimonials" >
   <Carousel/>
-  </div> */}
+  </div>
   <div id="sendMessage">
 <SendMessage/>
 </div>

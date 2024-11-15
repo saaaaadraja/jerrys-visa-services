@@ -121,8 +121,8 @@ function changeSelectHandler(e) {
     }
 
     function clickHandlerTimeSlots(index) {
-      setSelectedTimeSlot(index);
       setTimeSlotNextDisabled(false);
+      setSelectedTimeSlot(index);
     }
 
 
@@ -189,7 +189,7 @@ function changeSelectHandler(e) {
                    })
                   }
                 </div>
-                {selectedTimeSlot && (
+                {selectedTimeSlot > -1 && (
         <p className='w-85 m-auto mt-2'>
           You have selected Time Slot: <strong>{timeSlots[selectedTimeSlot]}</strong>
         </p>
