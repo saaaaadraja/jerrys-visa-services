@@ -6,37 +6,11 @@ import sliderImg1 from '../assets/images/slider-img1.png'
 import sliderImg2 from '../assets/images/home-bg1.png'
 import sliderImg3 from '../assets/images/home-bg2.png'
 import Button from 'react-bootstrap/Button';
-import {useNavigate} from 'react-router-dom'
 
-function activeNavItem(path) {
-    var ele = document.querySelectorAll('.nav-link');
-    ele.forEach((element) => {
-     element.classList.remove('active');
-    });
-    if (path == '/') {
-     ele[0].classList.add('active');
-    }else if(path == '/about'){
-     ele[1].classList.add('active');
-    }else if(path == '/products'){
-     ele[2].classList.add('active');
-    }else if(path == '/contact'){
-     ele[3].classList.add('active');
-    } else if(path == '/appointment,'){
-      ele[3].classList.add('active');
-     }
-  
-  }
+
 const SimpleCarousel = () => {
-      const navigate = useNavigate();
     const clickHandler=(id)=>{
-        if (id == '/appointment') { 
-           window.open(`${id}`,'_blank','noreferrer');
-        }else{
-          activeNavItem(`${id}`);
-          navigate(`${id}`);
-          window.location.reload();
-        }
-        
+           window.open(`${id}`,'_blank','noreferrer');  
       }
   const settings = {
     dots: true,            // Show navigation dots

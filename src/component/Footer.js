@@ -48,9 +48,9 @@ const Footer = () => {
         </Col>
       </Row>
       <div className="row w-12 mb-2">
-        <div className="col-md-4"><a><img style={{  borderRadius: '0'}} className="w-100" src={fb} /></a></div>
-        <div className="col-md-4"><a><img style={{  borderRadius: '0'}} className="w-100"  src={inst} /></a></div>
-        <div className="col-md-4"><a><img  style={{  borderRadius: '0'}} className="w-100"  src={linkedin} /></a></div>
+        <div className="col-md-4"><a href="https://www.facebook.com/jerrysVisaServices/" target="_blank"><img style={{  borderRadius: '0'}} className="w-100" src={fb} /></a></div>
+        <div className="col-md-4"><a href="https://www.instagram.com/jerrysvisaservices/" target="_blank" ><img style={{  borderRadius: '0'}} className="w-100"  src={inst} /></a></div>
+        {/* <div className="col-md-4"><a><img  style={{  borderRadius: '0'}} className="w-100"  src={linkedin} /></a></div> */}
       </div>
     </Container>
 }

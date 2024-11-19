@@ -1251,3 +1251,46 @@ margin-top: -5rem !important;
         padding: 15px 0;
         background: #51bcff !important;
     }
+
+
+    .services-heading{
+        font-family: 'poppins-bold';
+        color: #0C73BC;
+    }
+    .service-detail-text{
+        font-family: 'poppins';
+        text-align: left;
+        font-size: 1.3rem;
+        font-weight: 100;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        animation:image-anim  1s ease-in;
+    }
+
+    .path-name{
+        color: #0C73BC;
+        font-family: 'poppins';
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    
+    .service-detail-img{
+        animation: image-anim 1s ease-in;
+    }
+
+    @keyframes image-anim {
+        0%{
+            opacity: 0;
+            scale: 1.2;
+        }
+        100%{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+
+    #Header{
+        position: relative;
+        z-index: 5;
+    }
