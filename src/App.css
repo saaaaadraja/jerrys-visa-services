@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slick-track{
+  position: relative;
+    top: 2vw !important;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-next{
+  display: block;
+  background: #00000070 !important;
+  border-radius: 50% !important;
+}
+.slick-prev{
+  display: block;
+  background: #00000070 !important;
+  border-radius: 50% !important;
+}
+
+.next-btn{
+  filter: grayscale(1);
+  width: 8rem !important;
+  margin: 1vw auto 0 !important;
+  position: relative;
+  right: -70rem;
+}
+.next-btn.active{
+  filter: grayscale(0);
+}
+
+.next-btn-time-slot{
+  filter: grayscale(1);
+  width: 8rem !important;
+  margin: 1vw auto 0 !important;
+  position: relative;
+  right: -71.3rem;
+}
+.next-btn-time-slot.active{
+  filter: grayscale(0);
+}
+.react-calendar {
+  width: 1181px !important;
+}

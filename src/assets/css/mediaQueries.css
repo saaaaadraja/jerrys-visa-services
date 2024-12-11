@@ -1,0 +1,56 @@
+@media screen and (min-width: 1220px) {
+    .consultation-btn {
+     font-size: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1037px) and (max-width: 1220px) {
+    .consultation-btn {
+     font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (min-width: 990px) and (max-width: 1037px) {
+    .consultation-btn {
+     font-size: 0.65rem;
+    }
+  }
+  @media screen and (min-width:100px)  and (max-width:250px) {
+    .consultation-btn {
+        font-size: 0.65rem;
+       }
+}
+@media screen and (min-width:500px)  and (max-width:990px) {
+    .consult-button{
+        width: 50%;
+    }
+}
+@media screen and (min-width:350px)  and (max-width:500px) {
+    .consult-button{
+        width: 75%;
+    }
+}
+  
+@media screen and (min-width:270px)  and (max-width:350px) {
+    .consult-button{
+        width: 95%;
+    }
+}
+  
+@media screen and (min-width:100px)  and (max-width:270px) {
+    .consult-button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-height:1140px){
+    .nav-link{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-height:990px){
+    .navbar-collapse{
+      background-color: white !important;
+    }
+}
