@@ -1,3 +1,4 @@
+import React from "react";
 export const SampleNextArrow = (props) => {
     const { className, style, onClick } = props;
     return (

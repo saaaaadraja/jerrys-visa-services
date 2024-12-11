@@ -857,6 +857,13 @@ font-size: 13px !important;
     }
 }
  @media only screen and (max-width: 990px) {
+    .gap-4{
+        gap: 0.5rem !important;
+    }
+    .navbar-collapse{
+        top: 6vw !important;
+        border-bottom: 2px solid #0b76c4;
+    }
    .pb-10{
     padding-bottom: 1vw !important;
    }
@@ -892,8 +899,8 @@ font-size: 13px !important;
         padding: 2vw 0;
     }
     .navbar-brand>img{
-        margin-top: -9.5vw !important;
-        width: 90% !important;
+        margin-top: -1vw !important;
+        width: 65% !important;
     }
     .bg-body-tertiary {
         height: 7vw;
@@ -952,7 +959,7 @@ top:13vw !important;
             padding-top: 5vw;
         }
         .navbar-brand>img{
-            margin-top: -9.5vw !important;
+            margin-top: -1.5vw !important;
             width: 90%;
         }
         .quantity-card{
@@ -1014,14 +1021,22 @@ text-align: left !important;
             width: 90% !important;
         }
         .navbar-brand>img{
-            margin-top: -8vw !important;
+            margin-top: -1vw !important;
             width: 90%;
         }
         .quantity-card{
             width: 80% !important;
         }
     }
+    @media only screen and (max-width:650px) {
+        .navbar-collapse{
+            top: 8vw !important;
+        }
+    }
     @media only screen and (max-width: 470px) {
+        .navbar-collapse {
+            top: 12vw !important;
+        }
         .bottle-disc{
 font-size: 3vw !important;
 max-height: 28vw !important;
@@ -1042,8 +1057,8 @@ margin-top: -17vw !important;
             height: 13vw;
         }
         .navbar-brand>img{
-            margin-top: -8vw !important;
-            width: 90%;
+            margin-top: -1vw !important;
+            width: 100% !important;
         }
         .quantity-card{
             width: 95% !important;
@@ -1064,7 +1079,12 @@ width: 30% !important;
             font-size: 12px;
            }
     }
-
+    @media only screen and (max-width: 310px) {
+        .navbar-brand>img{
+            margin-top: -7vw !important;
+            width: 100% !important;
+        }
+    }
     .contact-footer{
         margin: auto;
     width: 50%;

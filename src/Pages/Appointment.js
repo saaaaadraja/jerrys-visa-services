@@ -3,7 +3,7 @@ import AppointmentCalendar from '../component/AppointmentCalendar';
 import '../assets/css/appointment.css';
 import "../assets/css/send-mesage.scss";
 import { Button, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
-import messageImg from "../assets/images/message-img.png";
+import axios from 'axios';
 
 
 import '../App.css'
@@ -130,9 +130,12 @@ function changeSelectHandler(e) {
       e.preventDefault();
         if (formdata.name && formdata.email && formdata.phoneNumber) {
           if (formdata.email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-            setSuccessMsg('Your Request for appointment has been received successfully. We will be catch up with you soon through email or whatsapp message. Thanks !');
+         axios.post('https://208lwwesh5.execute-api.us-east-1.amazonaws.com',{serviceName:selectService,date:selectedDate,timeSlot:selectedTimeSlot,name:formdata.name,email:formdata.email,phoneNumber:formdata.phoneNumber,message:formdata.message})
+         .then((res)=>{
+           setSuccessMsg('Your Request for appointment has been received successfully. We will be catch up with you soon through email or whatsapp message. Thanks !');
+         }).catch((err)=>console.log(err))
           setTimeout(() => {
-             window.location.reload();
+            //  window.location.reload(); 
           }, 5000);
           }else{
             setErrMsg('Kindly input email address in correct formate.');
