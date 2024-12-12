@@ -21,6 +21,9 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
+  "overrides": {
+  "webpack": "4.42.0"
+},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
