@@ -130,14 +130,16 @@ function changeSelectHandler(e) {
       e.preventDefault();
         if (formdata.name && formdata.email && formdata.phoneNumber) {
           if (formdata.email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-         axios.post('https://3kq1lmddha.execute-api.us-east-1.amazonaws.com/Dev',JSON.stringify({serviceName:selectService,date:selectedDate,timeSlot:selectedTimeSlot,name:formdata.name,email:formdata.email,phoneNumber:formdata.phoneNumber,message:formdata.message}))
+         axios.post('https://3kq1lmddha.execute-api.us-east-1.amazonaws.com/Dev',JSON.stringify({serviceName:selectService,date:selectedDate.toLocaleDateString(),timeSlot:timeSlots[selectedTimeSlot],name:formdata.name,email:formdata.email,phoneNumber:formdata.phoneNumber,message:formdata.message}))
          .then((res)=>{
-          console.log(res);
-           setSuccessMsg('Your Request for appointment has been received successfully. We will be catch up with you soon through email or whatsapp message. Thanks !');
+          if (res.status == 200) {
+            setSuccessMsg('Your Request for appointment has been received successfully. We will be catch up with you soon through email or whatsapp message. Thanks !');
+            setTimeout(() => {
+               window.location.reload(); 
+            }, 5000);
+          }
          }).catch((err)=>console.log(err))
-          setTimeout(() => {
-            //  window.location.reload(); 
-          }, 5000);
+       
           }else{
             setErrMsg('Kindly input email address in correct formate.');
            setTimeout(() => {
