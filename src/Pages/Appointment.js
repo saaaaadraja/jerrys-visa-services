@@ -132,6 +132,7 @@ function changeSelectHandler(e) {
           if (formdata.email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
          axios.post('https://3kq1lmddha.execute-api.us-east-1.amazonaws.com/Dev',{serviceName:selectService,date:selectedDate,timeSlot:selectedTimeSlot,name:formdata.name,email:formdata.email,phoneNumber:formdata.phoneNumber,message:formdata.message})
          .then((res)=>{
+          console.log(res);
            setSuccessMsg('Your Request for appointment has been received successfully. We will be catch up with you soon through email or whatsapp message. Thanks !');
          }).catch((err)=>console.log(err))
           setTimeout(() => {
