@@ -27,13 +27,14 @@ const Appointment = () => {
   const [errMsg , setErrMsg] = React.useState('');
   const [successMsg , setSuccessMsg] = React.useState('');
   const [timeSlots , setTimeSlots] =  React.useState([
-    '11 : 00am - 11 : 30 am' , '11 : 30am - 12 : 00 pm' ,
-    '12 : 00pm - 12 : 30 pm' , '12 : 30pm - 01 : 00 pm' ,
-    '01 : 00pm - 01 : 30 pm' , '01 : 30pm - 02 : 00 pm' ,
-    '02 : 00pm - 02 : 30 pm' , '02 : 30pm - 03 : 00 pm' ,
-    '03 : 00pm - 03 : 30 pm' , '03 : 30pm - 04 : 00 pm' ,
-    '04 : 00pm - 04 : 30 pm' , '04 : 30pm - 05 : 00 pm' 
+    {slot:'11 : 00am - 11 : 30 am',disabled:false }, {slot:'11 : 30am - 12 : 00 pm',disabled:false },
+    {slot:'12 : 00pm - 12 : 30 pm',disabled:false} ,{slot: '12 : 30pm - 01 : 00 pm', disabled:false },
+    {slot:'01 : 00pm - 01 : 30 pm', disabled:false} , {slot:'01 : 30pm - 02 : 00 pm', disabled:false} ,
+    {slot:'02 : 00pm - 02 : 30 pm',disabled:false} , {slot:'02 : 30pm - 03 : 00 pm',disabled:false} ,
+    {slot:'03 : 00pm - 03 : 30 pm',disabled:false} , {slot:'03 : 30pm - 04 : 00 pm',disabled:false} ,
+    {slot:'04 : 00pm - 04 : 30 pm',disabled:false} , {slot:'04 : 30pm - 05 : 00 pm',disabled:false }
   ]);
+  const [availableSlots , setAvailableSlots] =  React.useState([]);
     const [today , setToday] =React.useState({
         date:'',day:'',month:'',year:''
     });
@@ -110,10 +111,37 @@ function changeSelectHandler(e) {
 
 
     function clickHandler(e) {
-      setIsCalender(false);
-      setIsTimeSlot(true);
-      setIsInfo(false);
+      axios.post('https://fwudp49pmh.execute-api.us-east-1.amazonaws.com/get',JSON.stringify({date:selectedDate.toLocaleDateString()}))
+      .then((res)=>{
+       if (res.status == 200) {
+        let resData = JSON.parse(res.data.data);  
+        
+        if (resData.length != 0) {      
+          setAvailableSlots(resData);
+        }
+       }
+      }).catch((err)=>console.log(err))
+      setTimeout(() => {    
+        setIsCalender(false);
+        setIsTimeSlot(true);
+        setIsInfo(false);
+      },500);
     }
+
+      // Function to map and disable unavailable time slots
+  React.useEffect(() => {
+if (availableSlots.length != 0) {
+    const updatedTimeSlots = timeSlots.map((ele) => {
+      let slot = ele?.slot;
+      return {
+        slot,
+        disabled: !availableSlots.some((available) => available.timeSlot === ele.slot),
+      };
+    });
+    setTimeSlots(updatedTimeSlots);   
+      
+  }
+  }, [availableSlots]);
     function clickHandlerTimeSlotNxt(params) {
       setIsCalender(false);
       setIsTimeSlot(false);
@@ -130,7 +158,7 @@ function changeSelectHandler(e) {
       e.preventDefault();
         if (formdata.name && formdata.email && formdata.phoneNumber) {
           if (formdata.email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-         axios.post('https://3kq1lmddha.execute-api.us-east-1.amazonaws.com/Dev',JSON.stringify({serviceName:selectService,date:selectedDate.toLocaleDateString(),timeSlot:timeSlots[selectedTimeSlot],name:formdata.name,email:formdata.email,phoneNumber:formdata.phoneNumber,message:formdata.message}))
+         axios.post('https://3kq1lmddha.execute-api.us-east-1.amazonaws.com/Dev',JSON.stringify({serviceName:selectService,date:selectedDate.toLocaleDateString(),timeSlot:timeSlots[selectedTimeSlot].slot.slot,name:formdata.name,email:formdata.email,phoneNumber:formdata.phoneNumber,message:formdata.message}))
          .then((res)=>{
           if (res.status == 200) {
             setSuccessMsg('Your Request for appointment has been received successfully. We will be catch up with you soon through email or whatsapp message. Thanks !');
@@ -191,13 +219,13 @@ function changeSelectHandler(e) {
                 <div className='w-90 m-auto mt-3 row'>
                   {
                    timeSlots.map((ele , i)=>{
-                    return   <div className='col-6' key={i}> <button className={`w-100 text-center time-slot ${selectedTimeSlot === i ? 'active' : ''} mt-2`} onClick={(e)=>clickHandlerTimeSlots(i)}>{ele}</button></div>
+                    return   <div className='col-6' key={i}> <button disabled={!ele.disabled}  className={`w-100 text-center time-slot ${!ele.disabled ? 'disable-time-slot' : ''} ${selectedTimeSlot === i ? 'active' : ''} mt-2`} onClick={(e)=>clickHandlerTimeSlots(i)}>{ele.slot}</button></div>
                    })
                   }
                 </div>
                 {selectedTimeSlot > -1 && (
         <p className='w-85 m-auto mt-2'>
-          You have selected Time Slot: <strong>{timeSlots[selectedTimeSlot]}</strong>
+          You have selected Time Slot: <strong>{timeSlots[selectedTimeSlot].slot}</strong>
         </p>
       )}
                 <Button onClick={clickHandlerTimeSlotNxt} className={`next-btn-time-slot ${timeSlotNextDisabled ? '' : 'active'}`} disabled = {timeSlotNextDisabled} variant="primary" type="submit">

@@ -130,3 +130,10 @@ gap: 5px;
 font-family: 'poppins-bold' !important;
 color: #9F303C !important;
 }
+
+
+.disable-time-slot{
+  background-color: gray;
+  color: white;
+  filter: grayScale(1);
+}
