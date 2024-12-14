@@ -3,6 +3,7 @@ import fb from "../assets/images/facebook.png";
 import inst from "../assets/images/inst.png";
 import linkedin from "../assets/images/linkedin.png";
 import logo from '../assets/images/logo1.png'
+import ticktokIcon from '../assets/images/ticktokIcon.jpg'
 
 import "../assets/css/footer.css";
 import { Col, Container, Row } from "react-bootstrap";
@@ -50,7 +51,7 @@ const Footer = () => {
       <div className="row w-12 mb-2">
         <div className="col-md-4"><a href="https://www.facebook.com/jerrysVisaServices/" target="_blank"><img style={{  borderRadius: '0'}} className="w-100" src={fb} /></a></div>
         <div className="col-md-4"><a href="https://www.instagram.com/jerrysvisaservices/" target="_blank" ><img style={{  borderRadius: '0'}} className="w-100"  src={inst} /></a></div>
-        {/* <div className="col-md-4"><a><img  style={{  borderRadius: '0'}} className="w-100"  src={linkedin} /></a></div> */}
+        <div className="col-md-4"><a href="https://www.tiktok.com/@jerrysvisa012?_t=8sDCqBGYTGj&_r=1" target="_blank" ><img  style={{  borderRadius: '0'}} className="w-100"  src={ticktokIcon} /></a></div>
       </div>
     </Container>
 }
