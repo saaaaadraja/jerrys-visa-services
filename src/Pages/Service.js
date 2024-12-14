@@ -11,6 +11,18 @@ import service3Img2 from '../assets/images/service3-img2.jpg'
 import service4Img1 from '../assets/images/service4-img1.jpg'
 import service4Img2 from '../assets/images/service4-img2.jpg'
 
+// country flag icons
+
+import uk from '../assets/images/uk.png'
+import america from '../assets/images/usa.png'
+import canada from '../assets/images/canada.png'
+import dubai from '../assets/images/dubai.png'
+import morocco from '../assets/images/morocco.png'
+import pakistan from '../assets/images/pakistan.png'
+import england from '../assets/images/england.png'
+import india from '../assets/images/india.png'
+import europe from '../assets/images/europe.png'
+
 const Service = () => {
 
     return (
@@ -24,8 +36,8 @@ const Service = () => {
             step required to fulfill visa application. We provide you with the list of documents that need
              to be provided and attested. Furthermore, it is our primary responsibility to prepare your all
               your documents if there is anything missing and give you the perfect solution and guidance for
-               it.  We deal with certain countries as UK, America, Canada, Dubai, Morocco, Pakista , Englan ,
-                India and European countries as well.  </div>
+               it.  We deal with certain countries as UK <img src={uk} className='w4 v-align-middle' alt="" /> , America<img src={america} className='w4 v-align-middle' alt="" /> , Canada <img src={canada} className='w4 v-align-middle' alt="" /> , Dubai <img src={dubai} className='w4 v-align-middle' alt="" /> , Morocco <img src={morocco} className='w4 v-align-middle' alt="" /> , Pakistan <img src={pakistan} className='w4 v-align-middle' alt="" />  , England <img src={england} className='w4 v-align-middle' alt="" />  ,
+                India <img src={india} className='w4 v-align-middle' alt="" />  and European countries <img src={europe} className='w4 v-align-middle' alt="" />  as well.  </div>
           <div className='col-6 text-right'>
             <img className='w-90 service-detail-img' src={service1Img1} alt="" />
           </div>
