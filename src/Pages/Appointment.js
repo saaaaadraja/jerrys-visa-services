@@ -27,12 +27,12 @@ const Appointment = () => {
   const [errMsg , setErrMsg] = React.useState('');
   const [successMsg , setSuccessMsg] = React.useState('');
   const [timeSlots , setTimeSlots] =  React.useState([
-    {slot:'11 : 00am - 11 : 30 am',disabled:false }, {slot:'11 : 30am - 12 : 00 pm',disabled:false },
-    {slot:'12 : 00pm - 12 : 30 pm',disabled:false} ,{slot: '12 : 30pm - 01 : 00 pm', disabled:false },
-    {slot:'01 : 00pm - 01 : 30 pm', disabled:false} , {slot:'01 : 30pm - 02 : 00 pm', disabled:false} ,
-    {slot:'02 : 00pm - 02 : 30 pm',disabled:false} , {slot:'02 : 30pm - 03 : 00 pm',disabled:false} ,
-    {slot:'03 : 00pm - 03 : 30 pm',disabled:false} , {slot:'03 : 30pm - 04 : 00 pm',disabled:false} ,
-    {slot:'04 : 00pm - 04 : 30 pm',disabled:false} , {slot:'04 : 30pm - 05 : 00 pm',disabled:false }
+    {slot:'11 : 00am - 11 : 30 am',disabled:true }, {slot:'11 : 30am - 12 : 00 pm',disabled:true },
+    {slot:'12 : 00pm - 12 : 30 pm',disabled:true} ,{slot: '12 : 30pm - 01 : 00 pm', disabled:true },
+    {slot:'01 : 00pm - 01 : 30 pm', disabled:true} , {slot:'01 : 30pm - 02 : 00 pm', disabled:true} ,
+    {slot:'02 : 00pm - 02 : 30 pm',disabled:true} , {slot:'02 : 30pm - 03 : 00 pm',disabled:true} ,
+    {slot:'03 : 00pm - 03 : 30 pm',disabled:true} , {slot:'03 : 30pm - 04 : 00 pm',disabled:true} ,
+    {slot:'04 : 00pm - 04 : 30 pm',disabled:true} , {slot:'04 : 30pm - 05 : 00 pm',disabled:true }
   ]);
   const [availableSlots , setAvailableSlots] =  React.useState([]);
     const [today , setToday] =React.useState({
