@@ -1,7 +1,6 @@
 import React from "react";
 import fb from "../assets/images/facebook.png";
 import inst from "../assets/images/inst.png";
-import linkedin from "../assets/images/linkedin.png";
 import logo from '../assets/images/logo1.png'
 import ticktokIcon from '../assets/images/ticktokIcon.jpg'
 
