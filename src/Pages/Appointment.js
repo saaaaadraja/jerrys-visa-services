@@ -111,7 +111,7 @@ function changeSelectHandler(e) {
 
 
     function clickHandler(e) {
-      axios.post('https://fwudp49pmh.execute-api.us-east-1.amazonaws.com/get',JSON.stringify({date:selectedDate.toLocaleDateString()}))
+      axios.post('https://fwudp49pmh.execute-api.us-east-1.amazonaws.com/get',JSON.stringify({date:`${selectedDate.getDate()}/${selectedDate.getMonth()+1}/${selectedDate.getFullYear()}`}))
       .then((res)=>{
        if (res.status == 200) {
         let resData = JSON.parse(res.data.data);  
