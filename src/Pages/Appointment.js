@@ -7,8 +7,10 @@ import axios from 'axios';
 
 
 import '../App.css'
+import LoadingSpinner from '../component/LoadingSpinner';
 
 const Appointment = () => {
+  let  [isLoader , setIsLoader] = React.useState(false);
   const [selectService , setSelectService] = React.useState('');
   const [selectedDate, setSelectedDate] = React.useState(null);
   const [isCalendar , setIsCalender] = React.useState(true);
@@ -114,8 +116,11 @@ function changeSelectHandler(e) {
       axios.post('https://fwudp49pmh.execute-api.us-east-1.amazonaws.com/get',JSON.stringify({date:`${selectedDate.getDate()}/${selectedDate.getMonth()+1}/${selectedDate.getFullYear()}`}))
       .then((res)=>{
        if (res.status == 200) {
-        let resData = JSON.parse(res.data.data);  
-        
+        setIsLoader(true);
+        setTimeout(() => {
+          setIsLoader(false);
+        }, 700);
+        let resData = JSON.parse(res.data.data);
         if (resData.length != 0) {      
           setAvailableSlots(resData);
         }
@@ -213,7 +218,8 @@ if (availableSlots.length != 0) {
             </div>
             </div>
 }
-          { isTimeSlot && <div className='pb-5'>
+          {
+          isLoader?<LoadingSpinner/>:isTimeSlot && <div className='pb-5'>
                 <h1 className='time-heading w-50 m-auto text-center mt-5'>Select a Time Slot from Available Slots</h1>
                 <p className='sec-text w-25 m-auto text-center '>Duration: 30 Minutes</p>
                 <div className='w-90 m-auto mt-3 row'>

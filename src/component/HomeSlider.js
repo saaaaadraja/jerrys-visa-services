@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import sliderImg1 from '../assets/images/slider-img1.png'
-import sliderImg2 from '../assets/images/home-bg1.png'
-import sliderImg3 from '../assets/images/home-bg2.png'
+import sliderImg1 from '../assets/images/slider-img1.jpg'
+import sliderImg2 from '../assets/images/home-bg1.jpg'
+import sliderImg3 from '../assets/images/home-bg2.jpg'
 import Button from 'react-bootstrap/Button';
 
 
