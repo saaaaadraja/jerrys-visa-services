@@ -20,7 +20,7 @@ const Home = () =>{
   
 return (
     <>
-  <div className="w-100 " id="home">
+  <div className="w-100 h-100" id="home">
     <SimpleCarousel/>
   </div>
   <div className="row w-95 m-auto py-4" id="aboutUs">

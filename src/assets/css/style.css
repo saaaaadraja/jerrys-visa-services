@@ -1099,19 +1099,19 @@ width: 30% !important;
         padding: 0.5rem 0.2rem !important;
     }
     .consultation-btn{
-        background: #AECBCC !important;
+        background: #b71d29 !important;
         height: 2.2rem;
         width: 2.2rem;
         --bs-btn-padding-y: 0 !important;
         --bs-btn-padding-x: 0 !important;
         border: none;
-        color: #9f303c;
+        color: #FFF;
         font-size: 1rem;
         font-weight: bold;
         border-radius: 7px !important;
     }
     .consultation-btn:hover{
-        color: #0B76C4  !important;
+        color: gray  !important;
     }
     .heading-text{
         font-size: 4rem;
@@ -1324,4 +1324,7 @@ margin-top: -5rem !important;
     }
     .v-align-middle{
         vertical-align: middle !important;
+    }
+    .h-100{
+        min-height: 100vh;
     }
