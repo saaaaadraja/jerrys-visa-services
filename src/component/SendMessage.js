@@ -2,6 +2,11 @@ import React from "react";
 import "../assets/css/send-mesage.scss";
 import { Button, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import messageImg from "../assets/images/message-img.png";
+
+import loctionImg from '../assets/images/locationIcon.png'
+import phoneIcon from '../assets/images/phoneIcon.png'
+import emailIcon from '../assets/images/emaiIcon.png'
+
 const SendMessage = () => {
   return (
     <Container fluid className="send-message">
@@ -80,6 +85,7 @@ const SendMessage = () => {
                 </Button>
               </Form>
             </div>
+            
           </Col>
           <Col md={6} sm={12} className="d-flex justify-content-center">
             <div className="form-image-sec">
@@ -88,6 +94,12 @@ const SendMessage = () => {
           </Col>
         </Row>
       </div>
+    <div className="contact-detail-div">
+      <div ><img src={loctionImg} className="icon-width" alt="" /><a href="https://www.google.com/maps/place/405+Warwick+Rd,+Tyseley,+Birmingham+B11+2JR,+UK/@52.4527842,-1.8551559,17z/data=!3m1!4b1!4m6!3m5!1s0x4870bbc00fcf7245:0xc542ac2881b48a4a!8m2!3d52.452781!4d-1.852581!16s%2Fg%2F11rg5xxl3n?entry=ttu&g_ep=EgoyMDI1MDcyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">405 Warwick Road, 
+ tysely  B11 2JR</a></div>
+ <div><img className="icon-width" src={phoneIcon} alt="" /><a href="tel:+01217969379">0121 796 9379</a></div>
+ <div><img src={emailIcon} className="icon-width" alt="" /><a href="mailto:info@jerrysvisaservices.com">info@jerrysvisaservices.com</a></div>
+    </div>
     </Container>
   );
 };
