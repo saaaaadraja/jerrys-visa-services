@@ -82,9 +82,13 @@
 }
 
 .icon-width{
-     vertical-align: middle;
+    vertical-align: middle;
     width: 7%;
     margin-right: 2%;
+    background: white;
+    border-radius: 25px;
+    padding: 2px;
+    border: 1px solid #ff8888;
 }
 .contact-detail-div{
  display: flex;
