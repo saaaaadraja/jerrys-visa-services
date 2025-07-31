@@ -11,18 +11,6 @@ import service3Img2 from '../assets/images/service3-img2.jpg'
 import service4Img1 from '../assets/images/service4-img1.jpg'
 import service4Img2 from '../assets/images/service4-img2.jpg'
 
-// country flag icons
-
-import uk from '../assets/images/uk.png'
-import america from '../assets/images/usa.png'
-import canada from '../assets/images/canada.png'
-import dubai from '../assets/images/dubai.png'
-import morocco from '../assets/images/morocco.png'
-import pakistan from '../assets/images/pakistan.png'
-import england from '../assets/images/england.png'
-import india from '../assets/images/india.png'
-import europe from '../assets/images/europe.png'
-
 const Service = () => {
 
     return (
@@ -36,8 +24,8 @@ const Service = () => {
             step required to fulfill visa application. We provide you with the list of documents that need
              to be provided and attested. Furthermore, it is our primary responsibility to prepare your all
               your documents if there is anything missing and give you the perfect solution and guidance for
-               it.  We deal with certain countries as UK <img src={uk} className='w4 v-align-middle' alt="" /> , America<img src={america} className='w4 v-align-middle' alt="" /> , Canada <img src={canada} className='w4 v-align-middle' alt="" /> , Dubai <img src={dubai} className='w4 v-align-middle' alt="" /> , Morocco <img src={morocco} className='w4 v-align-middle' alt="" /> , Pakistan <img src={pakistan} className='w4 v-align-middle' alt="" />  , England <img src={england} className='w4 v-align-middle' alt="" />  ,
-                India <img src={india} className='w4 v-align-middle' alt="" />  and European countries <img src={europe} className='w4 v-align-middle' alt="" />  as well.  </div>
+               it.  We deal with certain countries as UK, America, Canada, Dubai, Morocco, Pakista , Englan ,
+                India and European countries as well.  </div>
           <div className='col-6 text-right'>
             <img className='w-90 service-detail-img' src={service1Img1} alt="" />
           </div>
@@ -57,11 +45,11 @@ const Service = () => {
             <p className='path-name mb-5'>OUR SERVICES/ Nadra Card</p>
              <div className='col-6 service-detail-text'>
                <h2 className="services-heading">NADRA CARD </h2>
-               NICOP card is required for UK which is the identification of  Pakistanis living abroad that 
-               keeps them connected to their homeland Guidance about documents required to apply for NICOP.
-                Helping them with their personal details need to be put on Nadra card and any correction 
-                needed in their prior card if they have one. We aim to provide services for registering
-                 family members and getting NADRA card for spouse and children’s as well.   </div>
+               NICOP card is  required  for UK which is the identification of  Pakistanis living abroad 
+               that keeps them connected to their homeland Guidance about documents required to apply for 
+               NICOP. Helping them with their personal details need to be put on Nadra card and any 
+               correction needed in their prior card if they have one. We aim to provide services for 
+               registering family members and getting NADRA card for spouse and children’s as well.   </div>
              <div className='col-6 text-right'>
                <img className='w-90 service-detail-img' src={service2Img1} alt="" />
              </div>
@@ -71,12 +59,12 @@ const Service = () => {
                <img className='w-90 service-detail-img' src={service2Img2} alt="" />
              </div>
              <div className='col-6 service-detail-text'>
-             Pakistan Overseas Card Online (NICOP Renewal) is issued to an eligible citizen of Pakistan 
-             who lives or has a reference abroad. Any Pakistani can travel back to Pakistan and apply for
-              NADRA card renewal without any documentation. The online application for NICOP Renewal is 
-              paid before head. Along with the Nicop payment, there are no extra charges taken. Our company 
-              provide with the facility to issue this card for you without any problems and also deliver it
-               to your doorstep.   </div>
+             Pakistan Overseas Card Online (NICOP Renewal) is issued to an eligible citizen of Pakistan who
+              lives or has a reference abroad. Any Pakistani can travel back to Pakistan and apply for
+               NADRA card renewal without any documentation. The online application for NICOP Renewal is 
+               paid before head. Along with the Nicop payment, there are no extra charges taken. Nadra Card
+                Center had the facility to track your status of NADRA cards whenever they want to. For the 
+                ease they deliver your card to your postal address.   </div>
             </div>
             </>) :
           window.location.pathname.split('/')[2] === 'passport-renewal' ?(<>
@@ -84,11 +72,11 @@ const Service = () => {
             <p className='path-name mb-5'>OUR SERVICES/ Passport Renewal</p>
              <div className='col-6 service-detail-text'>
                <h2 className="services-heading">PASSPORT RENEWAL</h2>
-               We guide you with the online process of passport renewal for UK. Through MRP (Machine 
-               Readable Passport ) application we guide you to upload certain documents for the renewal of 
-               passport . It is mandatory to renew your passport , if it is expiring within 6 months and 
-               MRP application works when you have original documents issued by Nadra . We will consult you
-                time to time with all the process . </div>
+               We guide you with the online process of passport renewal for UK. Through MRP 
+               (Machine Readable Passport ) application we guide you to upload certain documents for the 
+               renewal of passport. It is mandatory to renew your passport, if it is expiring within 6 
+               months and MRP application works when you have original documents issued by Nadra. We will 
+               consult you time to time with all the process. </div>
              <div className='col-6 text-right'>
                <img className='w-90 service-detail-img' src={service3Img1} alt="" />
              </div>
@@ -98,13 +86,15 @@ const Service = () => {
                <img className='w-90 service-detail-img' src={service3Img2} alt="" />
              </div>
              <div className='col-6 service-detail-text'>
-             We aim to give you detailed list of documents required for the renewal of passport. Original &
-              Photocopy Detailed Full Birth Certificate both parents names on it. Original and Photocopy 
-              of valid Nadra Card (NICOP). Original & Photocopy valid British Passport of the applicant. 
-              Original & photocopy of Pakistan Passports & ID cards of both parents. Family Registration 
-              certificate (FRC) from Nadra section. If it is getting complicated for client to renew 
-              passport, we give them facility to renew their passports without any complications. We build 
-              your  trust on us and give our best possible solution to all your problems.  </div>
+             We aim to give you detailed list of documents required for the renewal of passport.
+              Original & Photocopy Detailed Full Birth Certificate both parents names on it. Original and 
+              Photocopy of valid Nadra Card (NICOP). Original & Photocopy valid British Passport of the 
+              applicant. Original & photocopy of Pakistan Passports & ID cards of both parents. Family 
+              Registration certificate (FRC) from Nadra section. If applicant never had a Pakistan Passport 
+              (not in possession of any Pakistani Passport born in the UK) applying for 1st Pakistan Passport,
+               his/her application will be referred for National Status verification to the security Agency in 
+               Pakistan. Passport will be issued after verification from the security agency in Pakistan.  We 
+               build your trust on us and give our best possible solution to all your problems. </div>
             </div>
             </>) :
           window.location.pathname.split('/')[2] === 'attestation-regularisation' ? (<>

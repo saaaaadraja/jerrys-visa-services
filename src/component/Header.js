@@ -10,6 +10,8 @@ import consultIcon from '../assets/images/consult-icon.png'
 // images
 
 import logo from '../assets/images/logo1.png'
+import cart from '../assets/images/Icon ionic-md-cart.png'
+import search from '../assets/images/Icon feather-search.png'
 
 function activeNavItem(path) {
   var ele = document.querySelectorAll('.nav-link');

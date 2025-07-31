@@ -24,7 +24,7 @@ const Carousel = () => {
     dots: true,            // Show navigation dots
     slidesToScroll: 1,     // Scroll 1 slide at a time
     autoplay: true,        // Enable auto-play
-    autoplaySpeed: 4000,   // Set auto-play speed to 3 seconds
+    autoplaySpeed: 5000,   // Set auto-play speed to 3 seconds
     nextArrow: <SampleNextArrow />, // Custom next arrow
     prevArrow: <SamplePrevArrow />, // Custom prev arrow
     responsive: [

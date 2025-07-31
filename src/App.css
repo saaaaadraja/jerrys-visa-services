@@ -80,3 +80,18 @@
 .react-calendar {
   width: 1181px !important;
 }
+
+.icon-width{
+     vertical-align: middle;
+    width: 7%;
+    margin-right: 2%;
+}
+.contact-detail-div{
+ display: flex;
+    margin-left: 14vw;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vw;
+    width: 30%;
+    padding-bottom: 5vw;
+}
